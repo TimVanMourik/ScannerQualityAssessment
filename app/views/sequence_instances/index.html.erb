@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sequence Instances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sequence</th>
+      <th>Analysed</th>
+      <th>Timestamp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sequence_instances.each do |sequence_instance| %>
+      <tr>
+        <td><%= sequence_instance.sequence %></td>
+        <td><%= sequence_instance.analysed %></td>
+        <td><%= sequence_instance.timestamp %></td>
+        <td><%= link_to 'Show', sequence_instance %></td>
+        <td><%= link_to 'Edit', edit_sequence_instance_path(sequence_instance) %></td>
+        <td><%= link_to 'Destroy', sequence_instance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sequence Instance', new_sequence_instance_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sequence: one
+  analysed: false
+  timestamp: 2017-05-03 13:53:45
+
+two:
+  sequence: two
+  analysed: false
+  timestamp: 2017-05-03 13:53:45

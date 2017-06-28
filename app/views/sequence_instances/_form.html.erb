@@ -1,0 +1,32 @@
+<%= form_with(model: sequence_instance, local: true) do |form| %>
+  <% if sequence_instance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sequence_instance.errors.count, "error") %> prohibited this sequence_instance from being saved:</h2>
+
+      <ul>
+      <% sequence_instance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :sequence_id %>
+    <%= form.text_field :sequence_id, id: :sequence_instance_sequence_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :analysed %>
+    <%= form.check_box :analysed, id: :sequence_instance_analysed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timestamp %>
+    <%= form.datetime_select :timestamp, id: :sequence_instance_timestamp %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Scanner name:</strong>
+  <%= @scanner.scanner_name %>
+  <% pdf_file = "/logfiles/#{@scanner.scanner_name}.pdf" %>
+  <%= link_to 'Scanner Report', pdf_file %>
+</p>
+
+<p>
+  <strong>Insert Longitudinal PDF here</strong>
+</p>
+
+
+<table>
+
+  <thead>
+    <tr>
+      <th>Session Date</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scanner.sessions.each do |session| %>
+      <tr>
+        <td><%= session.scandate %></td>
+        <td><%= link_to 'Show', [@scanner, session] %></td>
+        <td><%= link_to 'Destroy', [@scanner, session], method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<%= link_to 'Edit', edit_scanner_path(@scanner) %> |
+<%= link_to 'Back', scanners_path %>

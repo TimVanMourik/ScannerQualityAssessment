@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sequence:</strong>
+  <%= @sequence_instance.sequence %>
+</p>
+
+<p>
+  <strong>Analysed:</strong>
+  <%= @sequence_instance.analysed %>
+</p>
+
+<p>
+  <strong>Timestamp:</strong>
+  <%= @sequence_instance.timestamp %>
+</p>
+
+<%= link_to 'Edit', edit_sequence_instance_path(@sequence_instance) %> |
+<%= link_to 'Back', sequence_instances_path %>

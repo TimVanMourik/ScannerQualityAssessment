@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scandate: 2017-05-03
+  sequence: 
+
+two:
+  scandate: 2017-05-03
+  sequence: 

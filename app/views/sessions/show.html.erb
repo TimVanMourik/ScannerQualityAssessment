@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Scandate:</strong>
+  <%= @session.scandate %>
+  <% pdf_file = "/logfiles/#{@scanner.scanner_name}/#{@session.scandate}.pdf" %>
+  <%= link_to 'Session Report', pdf_file %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Analysed</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @session.sequence_instances.each do |sequence_instance| %>
+      <tr>
+        <td><%= sequence_instance.sequence.sequence_name %></td>
+        <td><%= sequence_instance.analysed %></td>
+        <td><%= link_to 'Show', [@session, sequence_instance] %></td>
+        <td><%= link_to 'Destroy', [@session, sequence_instance], method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'Edit', edit_scanner_session_path(@session) %> |
+<%= link_to 'Back', scanner_path %>
