@@ -94,7 +94,10 @@ Session.create! [
 	{scanner: PrismaFit, scandate: 20170531},
 	{scanner: PrismaFit, scandate: 20170607},
 	{scanner: PrismaFit, scandate: 20170614},
-	{scanner: PrismaFit, scandate: 20170621}
+	{scanner: PrismaFit, scandate: 20170621},
+	{scanner: PrismaFit, scandate: 20170626},
+	{scanner: PrismaFit, scandate: 20170705},
+	{scanner: PrismaFit, scandate: 20170712}
 ]
 
 Prisma = Scanner.new(scanner_name: "Prisma")
@@ -170,7 +173,10 @@ Session.create! [
 	{scanner: Prisma, scandate: 20170530},
 	{scanner: Prisma, scandate: 20170606},
 	{scanner: Prisma, scandate: 20170613},
-	{scanner: Prisma, scandate: 20170620}
+	{scanner: Prisma, scandate: 20170627},
+	{scanner: Prisma, scandate: 20170704},
+	{scanner: Prisma, scandate: 20170711},
+	{scanner: Prisma, scandate: 20170718}
 ]
 
 Skyra = Scanner.new(scanner_name: "Skyra")
@@ -251,6 +257,9 @@ Session.create! [
 	{scanner: Skyra, scandate: 20170601},
 	{scanner: Skyra, scandate: 20170608},
 	{scanner: Skyra, scandate: 20170614},
-	{scanner: Skyra, scandate: 20170622}
+	{scanner: Skyra, scandate: 20170622},
+	{scanner: Skyra, scandate: 20170629},
+	{scanner: Skyra, scandate: 20170706},
+	{scanner: Skyra, scandate: 20170713}
 ]
 
