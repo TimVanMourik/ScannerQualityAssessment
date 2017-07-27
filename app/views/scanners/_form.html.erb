@@ -1,4 +1,4 @@
-<%= form_with(model: scanner, local: true) do |form| %>
+<%= form_for(@scanner) do |form| %>
   <% if scanner.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(scanner.errors.count, "error") %> prohibited this scanner from being saved:</h2>

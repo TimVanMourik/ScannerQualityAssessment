@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "scanners#index"
 
   resources :scanners do
-    resources :sessions do
+    resources :sessions,  except: [:index] do
       resources :sequence_instances
     end
   end

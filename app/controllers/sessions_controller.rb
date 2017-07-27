@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   # GET /sessions
   # GET /sessions.json
   def index
-    @sessions = Session.all
+    @sessions = @scanner.sessions
   end
 
   # GET /sessions/1
