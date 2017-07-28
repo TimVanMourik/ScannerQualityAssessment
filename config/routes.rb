@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "scanners#index"
+  root "home#index"
 
   resources :scanners do
     resources :sessions,  except: [:index] do
