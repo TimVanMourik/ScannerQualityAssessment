@@ -2,12 +2,6 @@ class SessionsController < ApplicationController
   before_action :set_scanner
   before_action :set_session, only: [:show, :edit, :update, :destroy]
 
-  # GET /sessions
-  # GET /sessions.json
-  def index
-    @sessions = @scanner.sessions
-  end
-
   # GET /sessions/1
   # GET /sessions/1.json
   def show

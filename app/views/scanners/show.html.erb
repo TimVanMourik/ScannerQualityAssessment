@@ -2,31 +2,25 @@
 
 <p>
   <strong>Scanner name:</strong>
-  <%= @scanner.scanner_name %>
   <% pdf_file = "/logfiles/#{@scanner.scanner_name}.pdf" %>
-  <%= link_to 'Scanner Report', pdf_file %>
+  <%= link_to @scanner.scanner_name, pdf_file %>
 </p>
-
-<p>
-  <strong>Insert Longitudinal PDF here</strong>
-</p>
-
 
 <table>
 
   <thead>
     <tr>
       <th>Session Date</th>
-      <th colspan="1"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @scanner.sessions.each do |session| %>
+    <% @scanner.sessions.order(scandate: :desc).each do |session| %>
       <tr>
-        <td><%= session.scandate %></td>
-        <td><%= link_to 'Show', [@scanner, session] %></td>
-        <td><%= link_to 'Destroy', [@scanner, session], method: :delete %></td>
+        <!-- <td><%= session.scandate %></td> -->
+        <!-- <td><%= Date.strptime("#{session.scandate}", "%Y%m%d").inspect %></td> -->
+        <td><%= link_to Date.strptime("#{session.scandate}", "%Y%m%d").inspect, [@scanner, session] %></td>
+        <!-- <td><%= link_to 'Destroy', [@scanner, session], method: :delete %></td> -->
       </tr>
     <% end %>
   </tbody>
